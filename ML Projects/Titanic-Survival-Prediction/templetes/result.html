@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Prediction Result</h1>
+
+    {% if prediction == 1 %}
+        <img src="{{ url_for('static', filename='survive.jpg') }}" alt="Survive Titanic Image" width="400">
+    {% else %}
+        <img src="{{ url_for('static', filename='not_survive.jpg') }}" alt="Not Survive Image" width="400">
+    {% endif %}
+
+    <p style="font-size: 20px;">The passenger is predicted to {% if prediction == 1 %}survive{% else %}not survive{% endif %}.</p>
+    <a href="/">Go Back</a>
+</body>
+</html>
