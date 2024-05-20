@@ -1,0 +1,8 @@
+pandas
+numpy
+scikit-learn
+sentence-transformers
+streamlit
+spacy-streamlit
+matplotlib
+spaCy	>=3.7.2,<3.8.0
